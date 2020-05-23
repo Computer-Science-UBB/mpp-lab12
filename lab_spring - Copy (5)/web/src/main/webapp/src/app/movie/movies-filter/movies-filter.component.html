@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<br>
+<div align="center">
+  <table class="movies table table-bordered">
+    <tr>
+      <th class="header">ID</th>
+      <th class="header">Title</th>
+      <th class="header" >Description</th>
+      <th class="header" >Rating</th>
+      <th class="header" >Price</th>
+    </tr>
+    <tr *ngFor="let movie of movies">
+      <td>{{movie.id}}</td>
+      <td>{{movie.title}}</td>
+      <td>{{movie.description}}</td>
+      <td>{{movie.rating}}</td>
+      <td>{{movie.price}}</td>
+    </tr>
+  </table>
+  <br>
+  <ul class="list-group">
+    <li >Title:
+      <input type="checkbox" (click)="changeTitleOrientation()"/>
+    </li>
+    <li>Description:
+      <input type="checkbox" (click)="changeDescriptionOrientation()"/>
+    </li>
+    <li>Rating:
+      <input type="checkbox" (click)="changeRatingOrientation()"/>
+    </li>
+    <li>Price:
+      <input type="checkbox" (click)="changePriceOrientation()"/>
+    </li>
+    <li>Ascending:
+      <input type="checkbox" (click)="changeAscendingDescending()"/>
+    </li>
+  </ul>
+  <br>
+  <table>
+    <tr>
+      <td>
+        <button class="btn btn-outline-primary" (click)="sort()">Sort</button>
+      </td>
+      <td>
+        <button class="btn btn-outline-primary" (click)="back()">Back</button>
+      </td>
+    </tr>
+  </table>
+</div>

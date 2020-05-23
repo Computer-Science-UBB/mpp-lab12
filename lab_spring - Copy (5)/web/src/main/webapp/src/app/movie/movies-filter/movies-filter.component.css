@@ -1,0 +1,41 @@
+td {
+  text-align: center;
+}
+
+th {
+  text-align: center;
+  font-size: larger;
+}
+
+.selected {
+  background-color: #CFD8DC !important;
+  color: white;
+}
+
+.movies {
+}
+
+.movies tr {
+  cursor: pointer;
+  background-color: #EEE;
+}
+
+.movies tr.selected:hover {
+  background-color: #BBD8DC !important;
+  color: white;
+}
+
+.movies tr:hover {
+  color: #607D8B;
+  background-color: #DDD;
+
+}
+
+.movies .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  background-color: #607D8B;
+}
+
+

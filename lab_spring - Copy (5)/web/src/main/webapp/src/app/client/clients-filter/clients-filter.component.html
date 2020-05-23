@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<br>
+<div align="center">
+  <table class="clients table table-bordered">
+    <tr>
+      <th class="header">ID</th>
+      <th class="header">FirstName</th>
+      <th class="header" >SecondName</th>
+      <th class="header" >Job</th>
+      <th class="header" >Age</th>
+    </tr>
+    <tr *ngFor="let client of clients">
+      <td>{{client.id}}</td>
+      <td>{{client.firstname}}</td>
+      <td>{{client.secondname}}</td>
+      <td>{{client.job}}</td>
+      <td>{{client.age}}</td>
+    </tr>
+  </table>
+  <br>
+  <ul class="list-group">
+    <li >FirstName:
+      <input type="checkbox" (click)="changeFirstNameOrientation()"/>
+    </li>
+    <li>SecondName:
+      <input type="checkbox" (click)="changeSecondNameOrientation()"/>
+    </li>
+    <li>Job:
+      <input type="checkbox" (click)="changeJobOrientation()"/>
+    </li>
+    <li>Age:
+      <input type="checkbox" (click)="changeAgeOrientation()"/>
+    </li>
+    <li>Ascending:
+      <input type="checkbox" (click)="changeAscendingDescending()"/>
+    </li>
+  </ul>
+  <br>
+  <table>
+    <tr>
+      <td>
+        <button class="btn btn-outline-primary" (click)="sort()">Sort</button>
+      </td>
+      <td>
+        <button class="btn btn-outline-primary" (click)="back()">Back</button>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<div align="center">
+  <ul class="list-group">
+    <li>
+      <label class="col-form-label">New title (current: {{movie.title}}:
+        <input class="input-group" #title/></label>
+    </li>
+    <li>
+      <label class="col-form-label">New description (current: {{movie.description}}:
+        <input class="input-group" #description/></label>
+    </li>
+    <li>
+      <label class="col-form-label">New rating (current: {{movie.rating}}:
+        <input class="input-group" #rating/></label>
+    </li>
+    <li>
+      <label class="col-form-label">New price (current: {{movie.price}}:
+        <input class="input-group" #price/></label>
+    </li>
+  </ul>
+
+  <br>
+  <table>
+    <tr>
+      <td>
+        <button class="btn btn-outline-primary" (click)="save(title.value, description.value, rating.value, price.value)">Save</button>
+      </td>
+      <td>
+        <button class="btn btn-outline-primary" (click)="back()">Back</button>
+      </td>
+    </tr>
+  </table>
+</div>

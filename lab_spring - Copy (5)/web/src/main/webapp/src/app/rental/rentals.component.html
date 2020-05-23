@@ -1,0 +1,20 @@
+<br>
+<app-rentals-list></app-rentals-list>
+
+<div align="center">
+  <br>
+  <button (click)="add()" class="btn btn-outline-primary">Add new rental</button>
+  <br><br>
+  <ul class="list-group">
+    <li>
+      <label class="col-form-label">Client ID:
+        <input class="input-group" #clientID/></label>
+    </li>
+    <li>
+      <label class="col-form-label">Movie ID:
+        <input class="input-group" #movieID/></label>
+    </li>
+  </ul>
+  <br>
+  <button class="btn btn-outline-primary" (click)="filter(clientID.value, movieID.value)">Filter</button>
+</div>
