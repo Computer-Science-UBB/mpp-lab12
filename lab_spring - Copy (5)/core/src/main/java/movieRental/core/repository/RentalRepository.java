@@ -13,3 +13,4 @@ public interface RentalRepository extends BaseRepository<Rental, Long> {
     List<Rental> getRentalsByClient_IdAndAndMovie_Id(Long clientID, Long movieID);
 
 }
+    
